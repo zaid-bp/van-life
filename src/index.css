@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.main{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./assets/images/home-hero.png") no-repeat center center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 45px;
+}
+
+
+.simple {
+    background-color: #E17654;
+}
+
+.rugged {
+    background-color: #115E59;
+}
+
+.luxury {
+    background-color: #161616;
+}
+.vanBtn{
+    @apply inline-block text-center px-2 py-1 font-bold text-white bg-[#FF8C38] w-full rounded-md;
+}
