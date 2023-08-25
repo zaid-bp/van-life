@@ -4,7 +4,6 @@ import { RootState } from '../../features/store'
 
 function HostVans() {
     const allVans = useSelector((state:RootState)=>state.van.data);
-    // vans.id==="123"
     const hostVans = allVans.filter((vans)=>vans.hostId === "123");
     
   return (
