@@ -3,7 +3,7 @@ import bgImg from '../assets/images/about-hero.png';
 
 function About() {
   return (
-      <div className="about-page-container pt-20">
+      <div className="about-page-container pt-20 pb-5">
           <img src={bgImg} className="about-hero-image" />
           <div className="about-page-content px-3 mt-3 mb-8">
               <h1 className='text-3xl font-bold'>Don’t squeeze in a sedan when you could relax in a van.</h1>

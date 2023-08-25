@@ -6,7 +6,7 @@ function Layout() {
   return (
     <>
     <Navbar/>
-    <main className='mb-3de2'>
+    <main className='min-h-screen'>
     <Outlet/>
     </main>
     <Footer/>
