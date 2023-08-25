@@ -7,6 +7,7 @@ interface Van{
     description:string;
     imageUrl:string;
     type:string;
+    hostId: string;
   } 
   interface VanData{
     data : Van[];
