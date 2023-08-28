@@ -1,8 +1,7 @@
-import React from 'react'
 import { useOutletContext } from 'react-router-dom'
 
 function VanPhotos() {
-    const {imageUrl, name} = useOutletContext()
+    const {imageUrl, name}:{imageUrl:string, name:string} = useOutletContext()
   return (
     <img src={imageUrl} alt={name} className='w-32' />
   )

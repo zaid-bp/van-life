@@ -1,10 +1,12 @@
 import { useOutletContext } from "react-router-dom";
 
-
 const VanDetails=() => {
-    const vanDetail = useOutletContext();
-    const {name, type, description} = vanDetail
-    // console.log(vanDetail.id);
+    interface DescType{
+        name:string,
+        type:string,
+        description:string
+    }
+    const {name, type, description}:DescType = useOutletContext();
     
   return (
     <section className="flex flex-col space-y-3">
