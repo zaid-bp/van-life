@@ -1,10 +1,6 @@
-import { useSelector } from 'react-redux';
-import { RootState } from '../features/store';
 import { Link } from "react-router-dom";
-function Home() {
-const store = useSelector((state:RootState)=>state.van.data);
-console.log(store);
 
+function Home() {
   return (
     <div className='main text-white h-screen flex flex-col justify-evenly'>
       <div className=''>
