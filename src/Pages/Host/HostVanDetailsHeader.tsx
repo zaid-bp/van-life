@@ -17,8 +17,8 @@ const HostVanDetailsHeader:React.FC<VanDetails>=({vanDetail})=> {
         const {name, price, imageUrl, type} = vanDetail;
      
     return (
-            <>
-            <Link className="py-5" to='..' relative="path">&#8701; Back to all vans</Link>
+            <div className="space-y-4 mt-4">
+            <Link className="my-5" to='..' relative="path">&#8701; Back to all vans</Link>
             
                 <header className="flex">
                     <img className="rounded-sm w-40 h-40" src={imageUrl} alt="notfound" />
@@ -30,7 +30,7 @@ const HostVanDetailsHeader:React.FC<VanDetails>=({vanDetail})=> {
                         <p className="van-price"><span className="font-bold text-xl">${price}</span>/day</p>
                     </div>
                 </header>
-            </>
+            </div>
     )
 }
 

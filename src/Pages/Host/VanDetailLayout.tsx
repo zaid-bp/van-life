@@ -19,7 +19,9 @@ function VanDetailLayout() {
   return (
     <>
         <HostVanDetailsHeader vanDetail={vanProps}/>
-        <VanDetailNav />
+        <div className="py-2">
+            <VanDetailNav />
+        </div>
         <Outlet context={vanProps}/>
     </>
   )
