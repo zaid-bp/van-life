@@ -4,7 +4,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 
 function Vans() {
     const vans = useSelector((state: RootState) => state.van.data);
-    const [type, setType] = useSearchParams()
+    const [type] = useSearchParams()
     const selectedType = type.get('type');
     const displayVans = selectedType?vans.filter((vans)=>vans.type===selectedType):vans
     
