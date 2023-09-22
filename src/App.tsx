@@ -14,6 +14,7 @@ import VanPricing from './Pages/Host/VanDesc/VanPricing';
 import VanPhotos from './Pages/Host/VanDesc/VanPhotos';
 import VanDetails from './Pages/Host/VanDesc/VanDetails';
 import VanDetailLayout from './Pages/Host/VanDetailLayout';
+import NotFound from './Pages/NotFound';
 function App() {
   
   return (
@@ -21,8 +22,8 @@ function App() {
     <BrowserRouter>
 
       <Routes>
-        <Route element={<Layout/>}>
-          <Route path='/' element={<Home/>} />
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<Home/>} />
           <Route path='about' element={<About/>} /> 
           <Route path='vans' element={<Vans/>} />
           <Route path='vans/:id' element={<VanDetail/>} />
@@ -38,6 +39,7 @@ function App() {
               <Route path='photos' element={<VanPhotos/>} />
             </Route>
           </Route>
+          <Route path='*' element={<NotFound/>} />
         </Route>
       </Routes>
     </BrowserRouter>

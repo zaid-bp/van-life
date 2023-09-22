@@ -7,15 +7,19 @@ function Vans() {
     const [type] = useSearchParams()
     const selectedType = type.get('type');
     const displayVans = selectedType?vans.filter((vans)=>vans.type===selectedType):vans
+    const filtersApplied = type.toString()
+    
     
     return (
         <div className='vanCont m-2 pt-20'>
             <h2 className='text-3xl font-extrabold'>Explore our van options</h2>
             <div className='my-2'>
+                <div>
                 <Link className='bg-[#ffead0] text-gray-800 mx-2 px-2 py-1 rounded-lg' to={'?type=simple'}>Simple</Link>
                 <Link className='bg-[#ffead0] text-gray-800 mx-2 px-2 py-1 rounded-lg' to={'?type=luxury'}>Luxury</Link>
                 <Link className='bg-[#ffead0] text-gray-800 mx-2 px-2 py-1 rounded-lg' to={'?type=rugged'}>Rugged</Link>
-                <Link className='border-b-2 border-black' to={'.'}>Clear Filters</Link>
+                </div>
+                <Link className='border-b-2 border-black inline-block m-2' to={'.'}>Clear Filters</Link>
             </div>
             <div className='grid grid-cols-2 py-5'>
                 {
@@ -24,7 +28,8 @@ function Vans() {
 
                         return (
                             <div key={id} className='van m-2'>
-                                <Link to={`/vans/${id}`}>
+                                <Link to={`/vans/${id}`} state={{filtersApplied}}>
+                                    
                                     <img className='rounded-md' src={imageUrl} alt={name} />
                                     <div className='space-y-2'>
                                         <h4 className='font-bold text-xl'>{name}</h4>
